@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-a3c1bd9220b1492e21be.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "wall_follower",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_wall_follower_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_wall_follower_egg-e9b81949575318f3c197.json",
+					"name" : "ament_cmake_python_build_wall_follower_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_wall_follower::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_wall_follower-60439b5196d22b733b10.json",
+					"name" : "ament_cmake_python_symlink_wall_follower",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-104f31bef9447e1c79a9.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wall_follower::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wall_follower-ca52a59d7656f2aae749.json",
+					"name" : "wall_follower",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wall_follower_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wall_follower_uninstall-621342544589fe5590fc.json",
+					"name" : "wall_follower_uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/pi/turtlebot3_ws/build/wall_follower",
+		"source" : "/home/pi/turtlebot3_ws/src/wall_follower"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

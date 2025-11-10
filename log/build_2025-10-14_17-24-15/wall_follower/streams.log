@@ -1,0 +1,49 @@
+[8.038s] Invoking command in '/home/pi/turtlebot3_ws/build/wall_follower': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/turtlebot3_ws/install/turtlebot3_teleop:/home/pi/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/pi/turtlebot3_ws/build/wall_follower -- -j14 -l14
+[10.259s] [35m[1mConsolidate compiler generated dependencies of target wall_follower[0m
+[10.349s] [ 50%] [32mBuilding CXX object CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o[0m
+[10.373s] [ 50%] Built target ament_cmake_python_symlink_wall_follower
+[12.611s] running egg_info
+[12.611s] writing wall_follower.egg-info/PKG-INFO
+[12.611s] writing dependency_links to wall_follower.egg-info/dependency_links.txt
+[12.611s] writing top-level names to wall_follower.egg-info/top_level.txt
+[12.611s] reading manifest file 'wall_follower.egg-info/SOURCES.txt'
+[12.611s] writing manifest file 'wall_follower.egg-info/SOURCES.txt'
+[12.845s] [ 50%] Built target ament_cmake_python_build_wall_follower_egg
+[49.575s] [100%] [32m[1mLinking CXX executable wall_follower[0m
+[51.048s] [100%] Built target wall_follower
+[51.125s] Invoked command in '/home/pi/turtlebot3_ws/build/wall_follower' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/turtlebot3_ws/install/turtlebot3_teleop:/home/pi/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/pi/turtlebot3_ws/build/wall_follower -- -j14 -l14
+[51.132s] Invoking command in '/home/pi/turtlebot3_ws/build/wall_follower': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/turtlebot3_ws/install/turtlebot3_teleop:/home/pi/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/pi/turtlebot3_ws/build/wall_follower
+[51.149s] -- Install configuration: ""
+[51.149s] -- Execute custom install script
+[51.171s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/lib/wall_follower/wall_follower
+[51.171s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower//launch/wall_follower.launch.py
+[51.171s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/include//wall_follower/wall_follower.hpp
+[51.178s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/environment/pythonpath.sh
+[51.178s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/environment/pythonpath.dsv
+[51.178s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/local/lib/python3.10/dist-packages/wall_follower-0.0.0-py3.10.egg-info/PKG-INFO
+[51.179s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/local/lib/python3.10/dist-packages/wall_follower-0.0.0-py3.10.egg-info/SOURCES.txt
+[51.179s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/local/lib/python3.10/dist-packages/wall_follower-0.0.0-py3.10.egg-info/dependency_links.txt
+[51.179s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/local/lib/python3.10/dist-packages/wall_follower-0.0.0-py3.10.egg-info/top_level.txt
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/local/lib/python3.10/dist-packages/wall_follower/__init__.py
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/local/lib/python3.10/dist-packages/wall_follower/landmark.py
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/lib/wall_follower/see_marker.py
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/lib/wall_follower/point_transformer.py
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/ament_index/resource_index/package_run_dependencies/wall_follower
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/ament_index/resource_index/parent_prefix_path/wall_follower
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/environment/ament_prefix_path.sh
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/environment/ament_prefix_path.dsv
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/environment/path.sh
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/environment/path.dsv
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/local_setup.bash
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/local_setup.sh
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/local_setup.zsh
+[51.180s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/local_setup.dsv
+[51.180s] -- Symlinking: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/package.dsv
+[51.246s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/ament_index/resource_index/packages/wall_follower
+[51.246s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/cmake/ament_cmake_export_include_directories-extras.cmake
+[51.246s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/cmake/ament_cmake_export_dependencies-extras.cmake
+[51.246s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/cmake/wall_followerConfig.cmake
+[51.246s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/cmake/wall_followerConfig-version.cmake
+[51.246s] -- Up-to-date symlink: /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/package.xml
+[51.331s] Listing '/home/pi/turtlebot3_ws/install/wall_follower/local/lib/python3.10/dist-packages/wall_follower'...
+[51.350s] Invoked command in '/home/pi/turtlebot3_ws/build/wall_follower' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/turtlebot3_ws/install/turtlebot3_teleop:/home/pi/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/pi/turtlebot3_ws/build/wall_follower

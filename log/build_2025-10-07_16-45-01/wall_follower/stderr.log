@@ -1,0 +1,11 @@
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:[m[K In member function ‘[01m[Kvoid WallFollower::update_callback()[m[K’:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:211:76:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before numeric constant
+  211 |         else if (scan_data_close_[LEFT] > 0.7) target_ang = 1.5, target_lin[01;31m[K [m[K[32m[K0.05[m[K;
+      |                                                                            [01;31m[K^[m[K[32m[K~~~~[m[K
+      |                                                                            [32m[K;[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:211:81:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+  211 |         else if (scan_data_close_[LEFT] > 0.7) target_ang = 1.5, target_lin 0.05[01;35m[K;[m[K
+      |                                                                                 [01;35m[K^[m[K
+gmake[2]: *** [CMakeFiles/wall_follower.dir/build.make:76: CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:140: CMakeFiles/wall_follower.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

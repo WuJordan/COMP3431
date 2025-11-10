@@ -1,0 +1,1 @@
+/home/pi/turtlebot3_ws/build/wall_follower/ament_cmake_environment_hooks/pythonpath.sh

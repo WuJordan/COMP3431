@@ -1,0 +1,17 @@
+[0.043s] Invoking command in '/home/pi/turtlebot3_ws/build/wall_follower': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/turtlebot3_ws/install/turtlebot3_teleop:/home/pi/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/pi/turtlebot3_ws/build/wall_follower -- -j4 -l4
+[0.290s] [35m[1mConsolidate compiler generated dependencies of target wall_follower[0m
+[0.403s] [ 50%] [32mBuilding CXX object CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o[0m
+[0.444s] [ 50%] Built target ament_cmake_python_symlink_wall_follower
+[0.807s] running egg_info
+[0.807s] writing wall_follower.egg-info/PKG-INFO
+[0.811s] writing dependency_links to wall_follower.egg-info/dependency_links.txt
+[0.817s] writing top-level names to wall_follower.egg-info/top_level.txt
+[0.841s] reading manifest file 'wall_follower.egg-info/SOURCES.txt'
+[0.841s] writing manifest file 'wall_follower.egg-info/SOURCES.txt'
+[0.977s] [ 50%] Built target ament_cmake_python_build_wall_follower_egg
+[7.009s] gmake[2]: *** wait: No child processes.  Stop.
+[7.013s] gmake[2]: *** Waiting for unfinished jobs....
+[7.013s] gmake[2]: *** wait: No child processes.  Stop.
+[7.013s] gmake[1]: *** [CMakeFiles/Makefile2:140: CMakeFiles/wall_follower.dir/all] Error 2
+[7.013s] gmake: *** [Makefile:146: all] Interrupt
+[7.036s] Invoked command in '/home/pi/turtlebot3_ws/build/wall_follower' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/turtlebot3_ws/install/turtlebot3_teleop:/home/pi/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/pi/turtlebot3_ws/build/wall_follower -- -j4 -l4

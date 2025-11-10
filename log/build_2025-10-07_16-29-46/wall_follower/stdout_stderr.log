@@ -1,0 +1,18 @@
+[35m[1mConsolidate compiler generated dependencies of target wall_follower[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o[0m
+[ 50%] Built target ament_cmake_python_symlink_wall_follower
+running egg_info
+writing wall_follower.egg-info/PKG-INFO
+writing dependency_links to wall_follower.egg-info/dependency_links.txt
+writing top-level names to wall_follower.egg-info/top_level.txt
+reading manifest file 'wall_follower.egg-info/SOURCES.txt'
+writing manifest file 'wall_follower.egg-info/SOURCES.txt'
+[ 50%] Built target ament_cmake_python_build_wall_follower_egg
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:[m[K In member function ‘[01m[Kvoid WallFollower::update_callback()[m[K’:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:207:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kout[m[K’ is not a member of ‘[01m[Kstd[m[K’; did you mean ‘[01m[Koct[m[K’?
+  207 |                 std::[01;31m[Kout[m[K << "front"<< std::endl;
+      |                      [01;31m[K^~~[m[K
+      |                      [32m[Koct[m[K
+gmake[2]: *** [CMakeFiles/wall_follower.dir/build.make:76: CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:140: CMakeFiles/wall_follower.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

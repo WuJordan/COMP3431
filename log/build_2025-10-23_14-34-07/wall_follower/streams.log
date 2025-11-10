@@ -1,0 +1,26 @@
+[0.075s] Invoking command in '/home/pi/turtlebot3_ws/build/wall_follower': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/turtlebot3_ws/install/turtlebot3_teleop:/home/pi/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/pi/turtlebot3_ws/build/wall_follower -- -j4 -l4
+[0.228s] [35m[1mConsolidate compiler generated dependencies of target wall_follower[0m
+[0.263s] [ 50%] [32mBuilding CXX object CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o[0m
+[0.364s] [ 50%] Built target ament_cmake_python_symlink_wall_follower
+[0.813s] running egg_info
+[0.815s] writing wall_follower.egg-info/PKG-INFO
+[0.815s] writing dependency_links to wall_follower.egg-info/dependency_links.txt
+[0.815s] writing top-level names to wall_follower.egg-info/top_level.txt
+[0.824s] reading manifest file 'wall_follower.egg-info/SOURCES.txt'
+[0.824s] writing manifest file 'wall_follower.egg-info/SOURCES.txt'
+[0.970s] [ 50%] Built target ament_cmake_python_build_wall_follower_egg
+[6.693s] [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:[m[K In member function ‘[01m[Kvoid WallFollower::update_callback()[m[K’:
+[6.694s] [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:211:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kscan_data_close[m[K’ was not declared in this scope; did you mean ‘[01m[Kscan_data_close_[m[K’?
+[6.694s]   211 |                 while ([01;31m[Kscan_data_close[m[K[FRONT] < 0.8 && scan_data_close_[FRONT] > 0) {
+[6.697s]       |                        [01;31m[K^~~~~~~~~~~~~~~[m[K
+[6.697s]       |                        [32m[Kscan_data_close_[m[K
+[6.697s] [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:212:48:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+[6.697s]   212 |                         update_cmd_vel(0, -0.8)
+[6.697s]       |                                                [01;31m[K^[m[K
+[6.697s]       |                                                [32m[K;[m[K
+[6.697s]   213 |                 [32m[K}[m[K
+[6.697s]       |                 [32m[K~[m[K                               
+[13.391s] gmake[2]: *** [CMakeFiles/wall_follower.dir/build.make:76: CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o] Error 1
+[13.392s] gmake[1]: *** [CMakeFiles/Makefile2:140: CMakeFiles/wall_follower.dir/all] Error 2
+[13.394s] gmake: *** [Makefile:146: all] Error 2
+[13.397s] Invoked command in '/home/pi/turtlebot3_ws/build/wall_follower' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/turtlebot3_ws/install/turtlebot3_teleop:/home/pi/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/pi/turtlebot3_ws/build/wall_follower -- -j4 -l4
