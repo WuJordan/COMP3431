@@ -1,0 +1,432 @@
+[  0%] Built target ament_cmake_python_symlink_wall_follower
+[ 50%] [32mBuilding CXX object CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o[0m
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:[m[K In constructor ‘[01m[KWallFollower::WallFollower()[m[K’:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:42:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool_sent[m[K’ was not declared in this scope
+   42 |         [01;31m[Kbool_sent[m[K = false;
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:45:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kturning_left[m[K’ was not declared in this scope
+   45 |         [01;31m[Kturning_left[m[K = false;
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:46:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kturning_right[m[K’ was not declared in this scope
+   46 |         [01;31m[Kturning_right[m[K = false;
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:47:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoving_forward_after_turning_left[m[K’ was not declared in this scope
+   47 |         [01;31m[Kmoving_forward_after_turning_left[m[K = false;
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:51:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcorrect_left[m[K’ was not declared in this scope
+   51 |         [01;31m[Kcorrect_left[m[K = false;
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:52:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcorrect_right[m[K’ was not declared in this scope
+   52 |         [01;31m[Kcorrect_right[m[K = false;
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:62:9:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_complete_pub_[m[K’ was not declared in this scope
+   62 |         [01;31m[Knav_complete_pub_[m[K = this->create_publisher<std_msgs::msg::Bool>("nav_complete", qos);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:62:67:[m[K [01;31m[Kerror: [m[K‘[01m[KBool[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   62 |         nav_complete_pub_ = this->create_publisher<std_msgs::msg::[01;31m[KBool[m[K>("nav_complete", qos);
+      |                                                                   [01;31m[K^~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:62:72:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KWallFollower::create_publisher<<expression error> >(const char [13], rclcpp::QoS&)[m[K’
+   62 |         nav_complete_pub_ = [01;31m[Kthis->create_publisher<std_msgs::msg::Bool>("nav_complete", qos)[m[K;
+      |                             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+   73 | [01;36m[KNode[m[K::create_publisher(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:62:72:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   62 |         nav_complete_pub_ = [01;31m[Kthis->create_publisher<std_msgs::msg::Bool>("nav_complete", qos)[m[K;
+      |                             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:[m[K In member function ‘[01m[Kvoid WallFollower::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:123:57:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst char*[m[K’
+  123 |                         RCLCPP_INFO(this->get_logger(), [01;31m[Kprint[m[K);
+      |                                                         [01;31m[K^~~~~[m[K
+      |                                                         [01;31m[K|[m[K
+      |                                                         [01;31m[Kstd::string {aka std::__cxx11::basic_string<char>}[m[K
+In file included from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:479:16:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid rcutils_log(const rcutils_log_location_t*, int, const char*, const char*, ...)[m[K’
+  479 |   [01;36m[Kconst char * format[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:[m[K At global scope:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:202:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid WallFollower::update_nav()[m[K’
+  202 | void [01;31m[KWallFollower[m[K::update_nav()
+      |      [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:202:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid WallFollower::update_nav()[m[K’
+In file included from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:48:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass WallFollower[m[K’ defined here
+   48 | class [01;36m[KWallFollower[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:[m[K In member function ‘[01m[Kvoid WallFollower::update_callback()[m[K’:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:253:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoving_forward_after_turning_left[m[K’ was not declared in this scope
+  253 |         if ([01;31m[Kmoving_forward_after_turning_left[m[K) {
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:259:57:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst char*[m[K’
+  259 |                         RCLCPP_INFO(this->get_logger(), [01;31m[Kprint[m[K);
+      |                                                         [01;31m[K^~~~~[m[K
+      |                                                         [01;31m[K|[m[K
+      |                                                         [01;31m[Kstd::string {aka std::__cxx11::basic_string<char>}[m[K
+In file included from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:479:16:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid rcutils_log(const rcutils_log_location_t*, int, const char*, const char*, ...)[m[K’
+  479 |   [01;36m[Kconst char * format[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:265:57:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst char*[m[K’
+  265 |                         RCLCPP_INFO(this->get_logger(), [01;31m[Kprint[m[K);
+      |                                                         [01;31m[K^~~~~[m[K
+      |                                                         [01;31m[K|[m[K
+      |                                                         [01;31m[Kstd::string {aka std::__cxx11::basic_string<char>}[m[K
+In file included from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:479:16:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid rcutils_log(const rcutils_log_location_t*, int, const char*, const char*, ...)[m[K’
+  479 |   [01;36m[Kconst char * format[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:269:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kturning_left[m[K’ was not declared in this scope
+  269 |         else if ([01;31m[Kturning_left[m[K) {
+      |                  [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:271:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_yaw[m[K’ was not declared in this scope
+  271 |                 double yaw_diff = robot_pose_ - [01;31m[Kprev_yaw[m[K;
+      |                                                 [01;31m[K^~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:272:28:[m[K [01;31m[Kerror: [m[K‘[01m[Knormalize_angle[m[K’ was not declared in this scope; did you mean ‘[01m[Ktf2NormalizeAngle[m[K’?
+  272 |                 yaw_diff = [01;31m[Knormalize_angle[m[K(yaw_diff);
+      |                            [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                            [32m[Ktf2NormalizeAngle[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:286:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kturning_right[m[K’ was not declared in this scope
+  286 |         else if ([01;31m[Kturning_right[m[K) {
+      |                  [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:288:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_yaw[m[K’ was not declared in this scope
+  288 |                 double yaw_diff = robot_pose_ - [01;31m[Kprev_yaw[m[K;
+      |                                                 [01;31m[K^~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:289:28:[m[K [01;31m[Kerror: [m[K‘[01m[Knormalize_angle[m[K’ was not declared in this scope; did you mean ‘[01m[Ktf2NormalizeAngle[m[K’?
+  289 |                 yaw_diff = [01;31m[Knormalize_angle[m[K(yaw_diff);
+      |                            [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                            [32m[Ktf2NormalizeAngle[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:303:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kcorrect_right[m[K’ was not declared in this scope
+  303 |         else if ([01;31m[Kcorrect_right[m[K) {
+      |                  [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:305:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_yaw[m[K’ was not declared in this scope
+  305 |                 double yaw_diff = robot_pose_ - [01;31m[Kprev_yaw[m[K;
+      |                                                 [01;31m[K^~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:306:28:[m[K [01;31m[Kerror: [m[K‘[01m[Knormalize_angle[m[K’ was not declared in this scope; did you mean ‘[01m[Ktf2NormalizeAngle[m[K’?
+  306 |                 yaw_diff = [01;31m[Knormalize_angle[m[K(yaw_diff);
+      |                            [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                            [32m[Ktf2NormalizeAngle[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:319:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kcorrect_left[m[K’ was not declared in this scope
+  319 |         else if ([01;31m[Kcorrect_left[m[K) {
+      |                  [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:321:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_yaw[m[K’ was not declared in this scope
+  321 |                 double yaw_diff = robot_pose_ - [01;31m[Kprev_yaw[m[K;
+      |                                                 [01;31m[K^~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:322:28:[m[K [01;31m[Kerror: [m[K‘[01m[Knormalize_angle[m[K’ was not declared in this scope; did you mean ‘[01m[Ktf2NormalizeAngle[m[K’?
+  322 |                 yaw_diff = [01;31m[Knormalize_angle[m[K(yaw_diff);
+      |                            [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                            [32m[Ktf2NormalizeAngle[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:346:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_nav[m[K’ was not declared in this scope
+  346 |                         [01;31m[Kupdate_nav[m[K();
+      |                         [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:349:57:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst char*[m[K’
+  349 |                         RCLCPP_INFO(this->get_logger(), [01;31m[Kprint1[m[K);
+      |                                                         [01;31m[K^~~~~~[m[K
+      |                                                         [01;31m[K|[m[K
+      |                                                         [01;31m[Kstd::string {aka std::__cxx11::basic_string<char>}[m[K
+In file included from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:479:16:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid rcutils_log(const rcutils_log_location_t*, int, const char*, const char*, ...)[m[K’
+  479 |   [01;36m[Kconst char * format[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:355:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_yaw[m[K’ was not declared in this scope
+  355 |                         [01;31m[Kprev_yaw[m[K = robot_pose_;
+      |                         [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:359:57:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst char*[m[K’
+  359 |                         RCLCPP_INFO(this->get_logger(), [01;31m[Kprint2[m[K);
+      |                                                         [01;31m[K^~~~~~[m[K
+      |                                                         [01;31m[K|[m[K
+      |                                                         [01;31m[Kstd::string {aka std::__cxx11::basic_string<char>}[m[K
+In file included from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:479:16:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid rcutils_log(const rcutils_log_location_t*, int, const char*, const char*, ...)[m[K’
+  479 |   [01;36m[Kconst char * format[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:364:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_yaw[m[K’ was not declared in this scope
+  364 |                         [01;31m[Kprev_yaw[m[K = robot_pose_;
+      |                         [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:368:57:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst char*[m[K’
+  368 |                         RCLCPP_INFO(this->get_logger(), [01;31m[Kprint4[m[K);
+      |                                                         [01;31m[K^~~~~~[m[K
+      |                                                         [01;31m[K|[m[K
+      |                                                         [01;31m[Kstd::string {aka std::__cxx11::basic_string<char>}[m[K
+In file included from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:479:16:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid rcutils_log(const rcutils_log_location_t*, int, const char*, const char*, ...)[m[K’
+  479 |   [01;36m[Kconst char * format[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:378:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_yaw[m[K’ was not declared in this scope
+  378 |                         [01;31m[Kprev_yaw[m[K = robot_pose_;
+      |                         [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:382:57:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst char*[m[K’
+  382 |                         RCLCPP_INFO(this->get_logger(), [01;31m[Kprint2[m[K);
+      |                                                         [01;31m[K^~~~~~[m[K
+      |                                                         [01;31m[K|[m[K
+      |                                                         [01;31m[Kstd::string {aka std::__cxx11::basic_string<char>}[m[K
+In file included from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:479:16:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid rcutils_log(const rcutils_log_location_t*, int, const char*, const char*, ...)[m[K’
+  479 |   [01;36m[Kconst char * format[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:387:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_yaw[m[K’ was not declared in this scope
+  387 |                         [01;31m[Kprev_yaw[m[K = robot_pose_;
+      |                         [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:391:57:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst char*[m[K’
+  391 |                         RCLCPP_INFO(this->get_logger(), [01;31m[Kprint4[m[K);
+      |                                                         [01;31m[K^~~~~~[m[K
+      |                                                         [01;31m[K|[m[K
+      |                                                         [01;31m[Kstd::string {aka std::__cxx11::basic_string<char>}[m[K
+In file included from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:479:16:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid rcutils_log(const rcutils_log_location_t*, int, const char*, const char*, ...)[m[K’
+  479 |   [01;36m[Kconst char * format[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:398:57:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst char*[m[K’
+  398 |                         RCLCPP_INFO(this->get_logger(), [01;31m[Kprint7[m[K);
+      |                                                         [01;31m[K^~~~~~[m[K
+      |                                                         [01;31m[K|[m[K
+      |                                                         [01;31m[Kstd::string {aka std::__cxx11::basic_string<char>}[m[K
+In file included from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:22[m[K,
+                 from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:479:16:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid rcutils_log(const rcutils_log_location_t*, int, const char*, const char*, ...)[m[K’
+  479 |   [01;36m[Kconst char * format[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:403:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kprint_scan_data[m[K’ was not declared in this scope
+  403 |         [01;31m[Kprint_scan_data[m[K();
+      |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:[m[K At global scope:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:412:8:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kdouble WallFollower::normalize_angle(double)[m[K’
+  412 | double [01;31m[KWallFollower[m[K::normalize_angle(double angle) {
+      |        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:412:8:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kdouble WallFollower::normalize_angle(double)[m[K’
+In file included from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:48:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass WallFollower[m[K’ defined here
+   48 | class [01;36m[KWallFollower[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:419:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid WallFollower::print_scan_data()[m[K’
+  419 | void [01;31m[KWallFollower[m[K::print_scan_data() {
+      |      [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:419:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid WallFollower::print_scan_data()[m[K’
+In file included from [01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:24[m[K:
+[01m[K/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp:48:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass WallFollower[m[K’ defined here
+   48 | class [01;36m[KWallFollower[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/wall_follower.dir/build.make:76: CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:140: CMakeFiles/wall_follower.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

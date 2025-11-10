@@ -233,8 +233,8 @@ void WallFollower::update_callback()
 		update_cmd_vel(current_lin_vel, current_ang_vel);
 		
 		// Once left wall detected: 
-		if ((scan_data_close_[LEFT_FRONT] < 0.4 && scan_data_close_[LEFT_FRONT] != 0) ||
-			(scan_data_close_[FRONT_LEFT] < 0.4 && scan_data_close_[FRONT_LEFT] != 0 ) ||
+		if ((scan_data_close_[LEFT_FRONT] < 0.5 && scan_data_close_[LEFT_FRONT] != 0) ||
+			(scan_data_close_[FRONT_LEFT] < 0.5 && scan_data_close_[FRONT_LEFT] != 0 ) ||
 			(scan_data_close_[FRONT] < 0.5 && scan_data_close_[FRONT] != 0 ) 
 		)	
 		{
@@ -260,8 +260,12 @@ void WallFollower::update_callback()
 	std::cout << "CORRECTIVE LEFT: " << scan_data_close_[FRONT_RIGHT] << std::endl;
 	target_ang = 1.3, target_lin = 0.1;
 	}
+	else if (scan_data_close_[FRONT_LEFT] < 0.4 && scan_data_close_[FRONT_LEFT] > 0) {
+		std::cout << "CORRECTIVE RIGHT: " << scan_data_close_[FRONT_LEFT] << std::endl;
+		target_ang = -1.2, target_lin = 0.1;
+	}
 	
-	else if (scan_data_close_[LEFT_FRONT] > 0.5) {
+	else if (scan_data_close_[LEFT_FRONT] > 0.6 || (scan_data_close_[LEFT_FRONT] == 0 && scan_data_close_[LEFT] !=0 )) {
 		std::cout << "LEFT_FRONT: " << scan_data_close_[LEFT_FRONT] << std::endl;
 		left_state = true;
 		// target_ang = 1.3, target_lin = 0.15;
@@ -282,10 +286,6 @@ void WallFollower::update_callback()
 
 		// CORRECTIVE LEFT AND RIGHTS
 		
-	else if (scan_data_close_[FRONT_LEFT] < 0.35 && scan_data_close_[FRONT_LEFT] > 0) {
-		std::cout << "CORRECTIVE RIGHT: " << scan_data_close_[FRONT_LEFT] << std::endl;
-		target_ang = -1.2, target_lin = 0.05;
-	}
 
 	// --- Smooth angular velocity ---
 	current_ang_vel = integ_smooth_ang * current_ang_vel + diff_smooth_ang * target_ang;
