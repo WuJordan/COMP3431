@@ -87,13 +87,19 @@ def main(args=None):
     rclpy.init(args=args)
     node = PointTransformer()
 
+    # Register a proper shutdown hook
+    def save_on_exit():
+        node.get_logger().info("💾 Saving landmarks before shutdown...")
+        node.saveLandmarks()
+
+    rclpy.get_default_context().on_shutdown(save_on_exit)
+
     try:
         rclpy.spin(node)
-    except KeyboardInterrupt:
-        node.saveLandmarks()
-        node.get_logger().info("Node stopped — all landmarks saved to CSV.")
     finally:
+        node.destroy_node()
         rclpy.shutdown()
+
 
 
 if __name__ == '__main__':
