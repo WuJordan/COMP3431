@@ -78,7 +78,7 @@ class SeeMarker(Node):
 		Callback function.
 		"""
 		# Display the message on the console
-		self.get_logger().info('Receiving video frame')
+		# self.get_logger().info('Receiving video frame')
 
 		# Need to uncompress ROS Image message
 		# np_arr = np.frombuffer(data.data, np.uint8)

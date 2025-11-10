@@ -42,8 +42,7 @@ class PointTransformer(Node):
     # === Transform each marker and update stored position ===
     def point_callback(self, msg):
         try:
-            transform = self.tf_buffer.lookup_transform(
-                'map', msg.header.frame_id, msg.header.stamp)
+            transform = self.tf_buffer.lookup_transform('map', msg.header.frame_id, rclpy.time.Time())
         except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as e:
             self.get_logger().error(f'Transform lookup failed: {str(e)}')
             return
