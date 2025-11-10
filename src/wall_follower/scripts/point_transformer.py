@@ -1,88 +1,101 @@
 #!/usr/bin/env python3
 
 # Released under GPLv3: https://www.gnu.org/licenses/gpl-3.0.html
-# Author: Claude Sammut
-# Last Modified: 2024.10.14
-
-# ROS 2 program to subscribe to update a MarkerArray subscribing to 
-# PointStamed topic, assuming it's published by a vision node.
+# Author: Claude Sammut, modified by Jordan Wu
+# Last Modified: 2025.11.10
 
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PointStamped
 import tf2_ros
 import tf2_geometry_msgs
-from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
 import csv
 
-
-import wall_follower.landmark
 from wall_follower.landmark import marker_type, max_markers, Landmark
 
 
 class PointTransformer(Node):
+    def __init__(self):
+        super().__init__('point_transformer')
 
-	def __init__(self):
-		super().__init__('point_transformer')
-		self.tf_buffer = tf2_ros.Buffer()
-		self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
-		self.point_subscriber = self.create_subscription(PointStamped, '/marker_position', self.point_callback, 10)
-		self.marker_publisher_ = self.create_publisher(MarkerArray, 'visualization_marker_array', 10)
+        # TF setup
+        self.tf_buffer = tf2_ros.Buffer()
+        self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 
-		self.marker_position = []
-		self.marker_array = MarkerArray()			
-		self.marker_array.markers = []
+        # Subscriptions
+        self.point_subscriber = self.create_subscription(
+            PointStamped, '/marker_position', self.point_callback, 10)
 
-		for i in range(max_markers):
-			self.marker_position.append(Landmark(i, self.marker_array.markers))
+        # Publishers
+        self.marker_publisher_ = self.create_publisher(
+            MarkerArray, 'visualization_marker_array', 10)
 
+        # Marker storage
+        self.marker_array = MarkerArray()
+        self.marker_array.markers = []
+        self.marker_position = [Landmark(i, self.marker_array.markers)
+                                for i in range(max_markers)]
 
-	def saveLandmarks(self):
-		with open('landmarks.csv', 'w', newline='') as csvfile:
-			lm_writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-			for lm in self.marker_position:
-				if lm.top_marker is not None:
-					lm_writer.writerow(lm.toRow())
+        self.get_logger().info("✅ PointTransformer node started. Waiting for marker detections...")
 
+    # === Transform each marker and update stored position ===
+    def point_callback(self, msg):
+        try:
+            transform = self.tf_buffer.lookup_transform(
+                'map', msg.header.frame_id, msg.header.stamp)
+        except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as e:
+            self.get_logger().error(f'Transform lookup failed: {str(e)}')
+            return
 
-	def point_callback(self, msg):
-		try:
-			# Lookup the transform from the camera_rgb_optical_frame to the map frame
+        # Get marker ID from z-value
+        which_marker = int(msg.point.z)
+        m_type = marker_type[which_marker]  # lookup readable type (e.g. "red")
+        msg.point.z = 0.0  # set real z to zero for 2D map
 
-			# Might be incorrect
-			# transform = self.tf_buffer.lookup_transform('map', msg.header.frame_id, rclpy.time.Time())
-			transform = self.tf_buffer.lookup_transform('map', msg.header.frame_id, msg.header.stamp)
-		except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as e:
-			self.get_logger().error('Transform lookup failed: %s' % str(e))
-			return
+        # Transform to /map frame
+        map_point = tf2_geometry_msgs.do_transform_point(msg, transform)
 
-		which_marker = int(msg.point.z)
-		m = marker_type[which_marker]
-		msg.point.z = 0.0
+        # Update internal record
+        self.marker_position[which_marker].update_position(map_point.point)
 
-		# Transform the point from camera_rgb_optical_frame to map frame
-		map_point = tf2_geometry_msgs.do_transform_point(msg, transform)
+        self.get_logger().info(
+            f"📍 Detected {m_type} marker at ({map_point.point.x:.3f}, {map_point.point.y:.3f}) in /map frame.")
 
-		# Print the transformed point in the map frame
-		self.get_logger().info(f'Mapped {m} marker to /map frame: x={map_point.point.x}, y={map_point.point.y}, z={map_point.point.z}')
+        self.marker_publisher_.publish(self.marker_array)
 
-		self.marker_position[which_marker].update_position(map_point.point)
-		self.marker_publisher_.publish(self.marker_array)
+    # === Save all landmarks into CSV when program stops ===
+    def saveLandmarks(self):
+        filename = 'markers.csv'
+        with open(filename, 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+
+            # First line: assumed start position (0, 0, 0)
+            writer.writerow([0.0, 0.0, 0.0])
+
+            # Then write each detected marker
+            for lm in self.marker_position:
+                if lm.top_marker is not None:
+                    x = lm.top_marker.x
+                    y = lm.top_marker.y
+                    # You can use lm.type or the marker_type index
+                    writer.writerow([x, y, lm.type])
+
+        self.get_logger().info(f"💾 Saved {filename} with all detected markers.")
 
 
 def main(args=None):
-	rclpy.init(args=args)
-	node = PointTransformer()
+    rclpy.init(args=args)
+    node = PointTransformer()
 
-	try:
-		rclpy.spin(node)
-	except KeyboardInterrupt:
-		node.saveLandmarks()
-		exit()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.saveLandmarks()
+        node.get_logger().info("Node stopped — all landmarks saved to CSV.")
+    finally:
+        rclpy.shutdown()
 
-	rclpy.shutdown()
 
 if __name__ == '__main__':
-	main()
-
+    main()

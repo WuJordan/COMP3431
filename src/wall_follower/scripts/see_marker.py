@@ -2,6 +2,7 @@
 
 # Released under GPLv3: https://www.gnu.org/licenses/gpl-3.0.html
 # Author: Claude Sammut
+
 # Last Modified: 2025.09.28
 
 # ROS 2 program to subscribe to real-time streaming 
@@ -34,10 +35,13 @@ field_of_view_h = 62.2
 field_of_view_v = 48.8
 focal_length = 3.04
 
+
 #in mm
+# pixel_size = 0.1525
+scaling = 0.625
 pixel_size = 0.1525
 real_object_size = 105.0
-distance_numerator = real_object_size * focal_length * pixel_size
+distance_numerator = real_object_size * focal_length * pixel_size * scaling
 
 class SeeMarker(Node):
 	"""
@@ -146,14 +150,10 @@ class SeeMarker(Node):
 
 # Need to adjust - HSV values
 colours = {
-    # "pink":   ((151, 136, 151), (171, 236, 255)),
-    # "blue":   ((90, 50, 50), (130, 255, 255)),
-    # "green":  ((72, 0, 22), (92, 255, 122)),
-    # "yellow": ((15, 202, 125), (35, 255, 225))
-	"pink":   ((142, 84, 102), (166, 255, 220)),
-    "blue":   ((103, 60, 35), (120, 255, 240)),
-    "green":  ((71, 61, 29), (99, 255, 255)),
-    "yellow": ((21, 60, 121), (29, 255, 225))
+    "pink":   ((143, 40, 200), (190, 236, 255)),
+    "blue":   ((88, 100, 140), (108, 255, 255)),
+    "green":  ((75, 100, 10), (90, 255, 200)),
+    "yellow": ((10, 202, 190), (47, 255, 255))
 }
 
 
@@ -195,10 +195,10 @@ def get_stats(blobs, colour):
 		return None
 
 	# Need to adjust centre?
-	# Camera Image is 320 x 240
+	# Camera Image is 120 height x 160 width
 	largest = 0
 	rval = None
-	centre = 320 # 640/2
+	centre = 80 #160/2
 
 	for i in range(1, numLabels):
 		x = stats[i, cv2.CC_STAT_LEFT]
@@ -234,7 +234,7 @@ def get_stats(blobs, colour):
 
 			# Need to adjust denominator (640), should be 320?
 			# 640 = Number of pixels in the width?
-			angle = (centre - cx) * field_of_view_h / 640
+			angle = (centre - cx) * field_of_view_h / 120
 			if angle < 0:
 				angle += 360
 			rval = (cx, cy, h, distance, angle)
@@ -277,5 +277,3 @@ def main(args=None):
 	
 if __name__ == '__main__':
 	main()
-
-	
