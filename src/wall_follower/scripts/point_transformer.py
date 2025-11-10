@@ -96,10 +96,11 @@ def main(args=None):
 
     try:
         rclpy.spin(node)
+    except KeyboardInterrupt:
+         node.saveLandmarks()
     finally:
         node.destroy_node()
         rclpy.shutdown()
-
 
 
 if __name__ == '__main__':
