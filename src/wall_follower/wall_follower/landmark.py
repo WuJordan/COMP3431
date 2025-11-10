@@ -45,7 +45,7 @@ class Landmark:
 
 	def __init__(self, mtype, markers):
 		self.mtype = mtype
-		self.count = 0;
+		self.count = 0
 		self.sum_x = 0.0
 		self.sum_y = 0.0
 		self.top_marker = None

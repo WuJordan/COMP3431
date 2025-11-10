@@ -65,6 +65,7 @@ class PointTransformer(Node):
 
     # === Save all landmarks into CSV when program stops ===
     def saveLandmarks(self):
+        print(self.marker_position)
         filename = 'markers.csv'
         with open(filename, 'w', newline='') as csvfile:
             writer = csv.writer(csvfile)
@@ -72,13 +73,10 @@ class PointTransformer(Node):
             # First line: assumed start position (0, 0, 0)
             writer.writerow([0.0, 0.0, 0.0])
 
-            # Then write each detected marker
-            for lm in self.marker_position:
-                if lm.top_marker is not None:
-                    x = lm.top_marker.x
-                    y = lm.top_marker.y
-                    # You can use lm.type or the marker_type index
-                    writer.writerow([x, y, lm.type])
+            for i, landmark in enumerate(self.marker_position):
+                x = landmark.top_marker.pose.position.x
+                y = landmark.top_marker.pose.position.y
+                writer.writerow([x, y, marker_type[i]])
 
         self.get_logger().info(f"💾 Saved {filename} with all detected markers.")
 

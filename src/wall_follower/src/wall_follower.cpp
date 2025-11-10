@@ -209,23 +209,23 @@ void WallFollower::update_callback()
 	// +ve is Left
 	// -ve is right
 	else if (right_state) {
-		update_cmd_vel(0,-0.8);
-		std::cout << "Right state: " << scan_data_close_[FRONT] << std::endl; 
+		update_cmd_vel(0,-0.6);
+		// std::cout << "Right state: " << scan_data_close_[FRONT] << std::endl; 
 		if (scan_data_close_[FRONT] > 0.8 || 
 			((scan_data_close_[FRONT] > 0.8 || scan_data_close_[FRONT] == 0) && 
 			(scan_data_close_[FRONT_LEFT] > 0.45 || scan_data_close_[FRONT_LEFT] == 0) && 
 			(scan_data_close_[FRONT_RIGHT] > 0.45 || scan_data_close_[FRONT_RIGHT] == 0))) {
 			right_state = false;
-			std::cout << "EXITED OUT OF RIGHT STATE " << scan_data_close_[FRONT] << std::endl; 
-			std::cout << "EXIT FRONT-left: " << scan_data_close_[FRONT_LEFT] << std::endl; 
-			std::cout << "EXIT FRONT-right: " << scan_data_close_[FRONT_RIGHT] << std::endl; 
+			// std::cout << "EXITED OUT OF RIGHT STATE " << scan_data_close_[FRONT] << std::endl; 
+			// std::cout << "EXIT FRONT-left: " << scan_data_close_[FRONT_LEFT] << std::endl; 
+			// std::cout << "EXIT FRONT-right: " << scan_data_close_[FRONT_RIGHT] << std::endl; 
 		}
 
 		return;
 	}
 	else if (left_state) {
 		//(lin_vel, ang_vel)
-		RCLCPP_INFO(this->get_logger(), "In Left State");
+		// RCLCPP_INFO(this->get_logger(), "In Left State");
 		target_ang = 1.2;
 		target_lin = 0.15;
 		current_ang_vel = integ_smooth_ang * current_ang_vel + diff_smooth_ang * target_ang;
@@ -238,8 +238,8 @@ void WallFollower::update_callback()
 			(scan_data_close_[FRONT] < 0.5 && scan_data_close_[FRONT] != 0 ) 
 		)	
 		{
-			RCLCPP_INFO(this->get_logger(), "EXIT LEFT STATE");
-			RCLCPP_INFO(this->get_logger(), std::to_string(scan_data_close_[FRONT_LEFT]).c_str());
+			// RCLCPP_INFO(this->get_logger(), "EXIT LEFT STATE");
+			// RCLCPP_INFO(this->get_logger(), std::to_string(scan_data_close_[FRONT_LEFT]).c_str());
 			
 			left_state = false;
 		}
@@ -250,23 +250,23 @@ void WallFollower::update_callback()
 		(scan_data_close_[FRONT_RIGHT] < 0.3 && scan_data_close_[FRONT_RIGHT] != 0 )) // Something in front of the robot
 	{	
 		
-		std::cout << "FRONT: " << scan_data_close_[FRONT] << std::endl; 
-		std::cout << "FRONT-left: " << scan_data_close_[FRONT_LEFT] << std::endl; 
-		std::cout << "FRONT-right: " << scan_data_close_[FRONT_RIGHT] << std::endl; 
+		// std::cout << "FRONT: " << scan_data_close_[FRONT] << std::endl; 
+		// std::cout << "FRONT-left: " << scan_data_close_[FRONT_LEFT] << std::endl; 
+		// std::cout << "FRONT-right: " << scan_data_close_[FRONT_RIGHT] << std::endl; 
 		right_state = true;
 		// target_ang = -1.2, target_lin = 0.0; // turn right
 	}
 	else if (scan_data_close_[FRONT_RIGHT] < 0.4 && scan_data_close_[FRONT_RIGHT] > 0) {
-	std::cout << "CORRECTIVE LEFT: " << scan_data_close_[FRONT_RIGHT] << std::endl;
+	// std::cout << "CORRECTIVE LEFT: " << scan_data_close_[FRONT_RIGHT] << std::endl;
 	target_ang = 1.3, target_lin = 0.1;
 	}
 	else if (scan_data_close_[FRONT_LEFT] < 0.4 && scan_data_close_[FRONT_LEFT] > 0) {
-		std::cout << "CORRECTIVE RIGHT: " << scan_data_close_[FRONT_LEFT] << std::endl;
+		// std::cout << "CORRECTIVE RIGHT: " << scan_data_close_[FRONT_LEFT] << std::endl;
 		target_ang = -1.2, target_lin = 0.1;
 	}
 	
 	else if (scan_data_close_[LEFT_FRONT] > 0.6 || (scan_data_close_[LEFT_FRONT] == 0 && scan_data_close_[LEFT] !=0 )) {
-		std::cout << "LEFT_FRONT: " << scan_data_close_[LEFT_FRONT] << std::endl;
+		// std::cout << "LEFT_FRONT: " << scan_data_close_[LEFT_FRONT] << std::endl;
 		left_state = true;
 		// target_ang = 1.3, target_lin = 0.15;
 	}
