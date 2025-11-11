@@ -14,14 +14,17 @@ import math
 
 class MarkerNavigator(Node):
     def __init__(self):
-        super().__init__('marker_navigator')
+        super().__init__('navigate_marker')
         self.client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
+
+        self.client.wait_for_server(timeout_sec=20.0)
 
         # Read markers and starting pose
 
         self.initial_pose_publisher = self.create_publisher(PoseWithCovarianceStamped, '/initialpose', 10)
-        self.start_pose, self.markers = self.load_markers('/home/comp3431/colcon_ws/src/wall_follower/scripts/positions.csv')
+        self.start_pose, self.markers = self.load_markers('/home/pi/turtlebot3_ws/markers.csv')
         
+        self.set_initial_pose()
         self.navigate_to_markers()
 
     def load_markers(self, filepath):
@@ -54,7 +57,7 @@ class MarkerNavigator(Node):
         # self.client.wait_for_server(timeout_sec=5.0)
         
         # time.sleep(5)
-        self.navigate_to_markers()
+        # self.navigate_to_markers()
 
         #self.client.send_goal_async(NavigateToPose.Goal(pose=initial_pose), feedback_callback=self.feedback_callback)
     
@@ -67,11 +70,11 @@ class MarkerNavigator(Node):
 
         # Wait for the action server to be ready
         self.get_logger().info("Waiting for action server to be ready...")
-        self.client.wait_for_server(timeout_sec=5.0)
+        self.client.wait_for_server(timeout_sec=20.0)
         
-        if not self.client.server_is_ready():
-            self.get_logger().error('Action server is not ready!')
-            return
+        # if not self.client.server_is_ready():
+        #     self.get_logger().error('Action server is not ready!')
+        #     return
 
         self.get_logger().info("Sending goal...")
         self._send_goal_future = self.client.send_goal(goal_msg)
@@ -101,7 +104,7 @@ class MarkerNavigator(Node):
         self.get_logger().info('Result: {0}'.format(result.sequence))
     
     def navigate_to_markers(self):
-        self.set_initial_pose()  # Set the initial position on the map
+        # self.set_initial_pose()  # Set the initial position on the map
         for x, y, marker_type in self.markers:
             self.get_logger().info(f"Navigating to marker {marker_type} at ({x}, {y})")
             self.send_goal(x, y)
