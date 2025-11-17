@@ -4,7 +4,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     return LaunchDescription([
         Node(
-            package='navigate_marker',
+            package='wall_follower',
             executable='navigate_marker.py',
             name='navigate_marker'
         )

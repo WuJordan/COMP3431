@@ -17,6 +17,7 @@ class MarkerNavigator(Node):
         super().__init__('navigate_marker')
         self.client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
 
+        self.get_logger().info(f"Waiting for server start")
         self.client.wait_for_server(timeout_sec=20.0)
 
         # Read markers and starting pose

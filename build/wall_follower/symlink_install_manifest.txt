@@ -1,4 +1,5 @@
 /home/pi/turtlebot3_ws/install/wall_follower/lib/wall_follower/wall_follower
+/home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower//launch/nav2_with_navigator.launch.py
 /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower//launch/navigate_marker.launch.py
 /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower//launch/wall_follower.launch.py
 /home/pi/turtlebot3_ws/install/wall_follower/include//wall_follower/wall_follower.hpp
@@ -12,6 +13,7 @@
 /home/pi/turtlebot3_ws/install/wall_follower/local/lib/python3.10/dist-packages/wall_follower/landmark.py
 /home/pi/turtlebot3_ws/install/wall_follower/lib/wall_follower/see_marker.py
 /home/pi/turtlebot3_ws/install/wall_follower/lib/wall_follower/point_transformer.py
+/home/pi/turtlebot3_ws/install/wall_follower/lib/wall_follower/navigate_marker.py
 /home/pi/turtlebot3_ws/install/wall_follower/share/ament_index/resource_index/package_run_dependencies/wall_follower
 /home/pi/turtlebot3_ws/install/wall_follower/share/ament_index/resource_index/parent_prefix_path/wall_follower
 /home/pi/turtlebot3_ws/install/wall_follower/share/wall_follower/environment/ament_prefix_path.sh

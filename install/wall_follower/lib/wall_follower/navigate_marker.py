@@ -1,0 +1,1 @@
+/home/pi/turtlebot3_ws/src/wall_follower/scripts/navigate_marker.py
