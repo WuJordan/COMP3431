@@ -1,3 +1,28 @@
-Terminal 1: ros2 launch turtlebot3_gazebo turtlebot3_maze.launch.py
-Terminal 2: ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
-Terminal 3: ros2 launch wall_follower wall_follower.launch.py
+File Architecture:
+src/wall_follower/launch: launch files for wall_follower. Starts see_marker.py, point_transformer.py and wall_follower.cpp
+src/wall_follower/scripts: relevant script files. hsv.py is a colour picker that finds the HSV values for colour masking calibration
+src/wall_follower/map: where the map.yaml and map.pgm is saved when saving the map from cartographer
+src/wall_follower/params: Nav2 configuration file that is loaded into nav2.
+
+Code Complile Instructions:
+1. Be inside of the turtlebot3_ws
+2. Run: colcon build --symlink-install
+
+
+Code Run Instructions:
+Step 1: ssh into robot. Run "bringup" and "start_camera" commands.
+
+Step 2: Run Cartogapher and Wall_follower to generate map and markers.csv:
+-launch cartographer: ros2 launch turtlebot3_cartographer cartographer.launch.py
+-launch wall_follower: ros2 launch wall_follower wall_follower.launch.py
+Note: To save markers.csv after wall_follower you must ctrl + c (keyboard interrupt) the wall_follower terminal
+
+Step 3: Save the map
+-save map: ros2 run nav2_map_server map_saver_cli -f /home/pi/turtlebot3_ws/src/wall_follower/map/map
+
+Step 4: Run navigate_marker node and Start Nav2 with imported map and configuration file:
+-Launch navigate marker: ros2 run wall_follower navigate_marker.py
+-Launch nav2: ros2 launch turtlebot3_navigation2 navigation2.launch.py  map:=/home/pi/turtlebot3_ws/src/wall_follower/map/map.yaml  params_file:=/home/pi/turtlebot3_ws/src/wall_follower/params/waffle_pi.yaml
+
+Note: markers.csv must be in the turtlebot3_ws directory. i.e. /home/pi/turtlebot3_ws/markers.csv
+ 
