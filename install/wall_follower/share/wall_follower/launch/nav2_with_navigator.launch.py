@@ -1,1 +1,0 @@
-/home/pi/turtlebot3_ws/src/wall_follower/launch/nav2_with_navigator.launch.py

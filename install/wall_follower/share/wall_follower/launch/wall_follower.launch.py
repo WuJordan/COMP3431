@@ -1,1 +1,0 @@
-/home/pi/turtlebot3_ws/src/wall_follower/launch/wall_follower.launch.py

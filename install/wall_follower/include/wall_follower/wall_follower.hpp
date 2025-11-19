@@ -1,1 +1,0 @@
-/home/pi/turtlebot3_ws/src/wall_follower/include/wall_follower/wall_follower.hpp
