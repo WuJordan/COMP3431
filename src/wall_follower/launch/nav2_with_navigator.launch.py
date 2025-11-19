@@ -31,7 +31,7 @@ def generate_launch_description():
         ExecuteProcess(
             cmd=[
                 'ros2', 'launch', 'turtlebot3_navigation2', 'navigation2.launch.py',
-                # 'params_file:=/home/pi/turtlebot3_ws/src/wall_follower/params/waffle_pi.yaml',
+                'params_file:=/home/pi/turtlebot3_ws/src/wall_follower/params/waffle_pi.yaml',
                 'map:=/home/pi/turtlebot3_ws/src/wall_follower/map/map.yaml'
             ],
             output='screen'
