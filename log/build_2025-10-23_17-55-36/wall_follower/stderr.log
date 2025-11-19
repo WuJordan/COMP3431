@@ -1,6 +1,0 @@
-[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:[m[K In member function ‘[01m[Kvoid WallFollower::update_callback()[m[K’:
-[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:198:21:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kleft_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
-  198 |         static bool [01;35m[Kleft_state[m[K = false;
-      |                     [01;35m[K^~~~~~~~~~[m[K
-[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:[m[K At global scope:
-[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:198:21:[m[K [01;35m[Kwarning: [m[K‘[01m[Kleft_state[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]

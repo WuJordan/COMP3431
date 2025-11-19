@@ -1,8 +1,0 @@
-[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:[m[K In member function ‘[01m[Kvoid WallFollower::update_callback()[m[K’:
-[01m[K/home/pi/turtlebot3_ws/src/wall_follower/src/wall_follower.cpp:217:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kscan_data_close[m[K’ was not declared in this scope; did you mean ‘[01m[Kscan_data_close_[m[K’?
-  217 |         else if (scan_data_close_[FRONT_LEFT] < 0.6 && [01;31m[Kscan_data_close[m[K[FRONT_LEFT] > 0) {
-      |                                                        [01;31m[K^~~~~~~~~~~~~~~[m[K
-      |                                                        [32m[Kscan_data_close_[m[K
-gmake[2]: *** [CMakeFiles/wall_follower.dir/build.make:76: CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:140: CMakeFiles/wall_follower.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
